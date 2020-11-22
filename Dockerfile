@@ -6,13 +6,12 @@ LABEL homepage="https://github.com/muldos/github-action-aws-cdk-amazonlinux"
 
 LABEL "com.github.actions.name"="github-action-aws-cdk-amazonlinux"
 LABEL "com.github.actions.description"="GitHub Action for AWS CDK based on amazonlinux"
-LABEL "com.github.actions.icon"="activity"
-LABEL "com.github.actions.color"="blue"
+LABEL "com.github.actions.icon"="upload-cloud"
+LABEL "com.github.actions.color"="yellow"
 
 RUN yum -y update
 RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
 RUN yum -y install nodejs python3-pip
-RUN npm install -g aws-cdk
 RUN python3 --version
 
 COPY entrypoint.sh /entrypoint.sh
