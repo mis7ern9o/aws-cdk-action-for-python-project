@@ -19,6 +19,6 @@ inputs:
   cdk_command:
     description: 'CDK Command'
     default: 'cdk --version'
-  working_dir:
+  cdk_work_dir:
     description: 'AWS CDK working directory.'
     default: '.'
