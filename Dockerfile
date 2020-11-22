@@ -1,10 +1,10 @@
 FROM amazonlinux:2
 
-LABEL name="github-action-aws-cdk-amazonlinux"
-LABEL repository="https://github.com/muldos/github-action-aws-cdk-amazonlinux"
-LABEL homepage="https://github.com/muldos/github-action-aws-cdk-amazonlinux"
+LABEL name="aws-cdk-action-for-python-project"
+LABEL repository="https://github.com/muldos/aws-cdk-action-for-python-project"
+LABEL homepage="https://github.com/muldos/aws-cdk-action-for-python-project"
 
-LABEL "com.github.actions.name"="github-action-aws-cdk-amazonlinux"
+LABEL "com.github.actions.name"="aws-cdk-action-for-python-project"
 LABEL "com.github.actions.description"="GitHub Action for AWS CDK based on amazonlinux"
 LABEL "com.github.actions.icon"="upload-cloud"
 LABEL "com.github.actions.color"="yellow"
