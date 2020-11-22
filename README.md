@@ -54,4 +54,5 @@ Container images built with this project include third party materials. See [THI
 
 ## Credits
 
-Many thanks to Scott Brenner for his [original Github Action](https://github.com/ScottBrenner/aws-cdk-action) which this action is based on.
+Many thanks to Scott Brenner and Greg Farrow for their [original Github Action(s)](https://github.com/ScottBrenner/aws-cdk-action) which this action is based on.
+
