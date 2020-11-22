@@ -1,4 +1,4 @@
-name: 'cdk-action-for-python-projects'
+name: 'aws-cdk-action-for-python-project'
 description: 'Action for running CDK and build layer for python projects in amazonlinux 2'
 working_dir:
     description: 'AWS CDK working directory.'
