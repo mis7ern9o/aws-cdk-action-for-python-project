@@ -27,10 +27,12 @@ jobs:
     - name: CDK Synth
       uses: muldos/github-action-aws-cdk-amazon-linux@master
       with:
-        args: synth
+        cdk_command: 'synth'
+        working_dir: 'deploy'
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS-DEFAULT_REGION: 'eu-west-1'
 ```
 
 ### Secrets
