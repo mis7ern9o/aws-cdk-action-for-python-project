@@ -1,5 +1,5 @@
-name: 'github-action-aws-cdk-amazon-linux'
-description: 'GitHub Action for running CDK in amazonlinux latest'
+name: 'cdk-action-for-python-projects'
+description: 'Action for running CDK and build layer for python projects in amazonlinux 2'
 working_dir:
     description: 'AWS CDK working directory.'
     default: '.'
