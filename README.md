@@ -27,8 +27,8 @@ jobs:
     - name: CDK Synth
       uses: muldos/github-action-aws-cdk-amazon-linux@master
       with:
-        python_build_command: 'python -m pip install -r requirements.txt -t ./dist/layer/python/lib/python3.8/site-packages'
-        zip_layer_command: 'zip -r ./dist/layer/third-parties-layer.zip .dist/layer/python'
+        python_build_command: 'pip3 install -r requirements.txt -t dist/layer/python/lib/python3.8/site-packages'
+        zip_layer_command: 'zip -r dist/layer/third-parties-layer.zip dist/layer/python'
         cdk_command: 'npx cdk synth'
         cdk_work_dir: 'deploy'
       env:
