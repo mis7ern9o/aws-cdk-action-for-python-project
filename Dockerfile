@@ -1,8 +1,8 @@
 FROM amazonlinux:2
 
 LABEL name="github-action-aws-cdk-amazonlinux"
-LABEL repository="https://github.com/g-farrow/github-action-aws-cdk-amazonlinux"
-LABEL homepage="https://github.com/g-farrow/github-action-aws-cdk-amazonlinux"
+LABEL repository="https://github.com/muldos/github-action-aws-cdk-amazonlinux"
+LABEL homepage="https://github.com/muldos/github-action-aws-cdk-amazonlinux"
 
 LABEL "com.github.actions.name"="github-action-aws-cdk-amazonlinux"
 LABEL "com.github.actions.description"="GitHub Action for AWS CDK based on amazonlinux"
