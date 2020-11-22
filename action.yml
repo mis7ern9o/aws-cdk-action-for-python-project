@@ -10,6 +10,9 @@ branding:
   icon: 'upload-cloud'
   color: 'yellow'
 inputs:
+  python_build_command:
+    description: 'command to build your layer'
+    default: 'python -V'
   cdk_command:
     description: 'CDK Command'
     default: 'cdk --version'
