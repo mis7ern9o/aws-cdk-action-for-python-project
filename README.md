@@ -1,14 +1,14 @@
 # GitHub Action for AWS CDK
 
-This Action for [AWS CDK](https://docs.aws.amazon.com/cdk/index.html) enables arbitrary actions for interacting with the AWS Cloud Development Kit (AWS CDK) via the [AWS CDK Command Line Interface (`cdk`)](https://docs.aws.amazon.com/cdk/latest/guide/cli.html).
+This Action for [AWS CDK](https://docs.aws.amazon.com/cdk/index.html) allow you to build your python layer in an amazon linux 2 docker image (so you will get native libs optimized for your lambda runtime environment), and allow you to run the cdk command you needs (cdk synth, npx cdk deploy, ...) after you build your python layer.
 
-_Currently supports CDK apps created with Python_
+_Currently supports CDK apps using Typescript cdk, and python projects_
 
 *This Github Action is specifically based on the Amazon Linux distribution to ensure Python dependencies, compiled to C, are functional when deployed to AWS Lambda.
 
 ## Usage
 
-An example workflow for synthesizing an AWS CloudFormation template for your app using `cdk synth`.
+An example workflow for building a layer zip archive, and synthesizing an AWS CloudFormation template for your app using `cdk synth`.
 
 ```yaml
 name: AWS CDK Synth
@@ -27,8 +27,10 @@ jobs:
     - name: CDK Synth
       uses: muldos/github-action-aws-cdk-amazon-linux@master
       with:
+        python_build_command: 'python -m pip install -r requirements.txt -t ./dist/layer/python/lib/python3.8/site-packages'
+        zip_layer_command: 'zip -r ./dist/layer/third-parties-layer.zip .dist/layer/python'
         cdk_command: 'npx cdk synth'
-        working_dir: 'deploy'
+        cdk_work_dir: 'deploy'
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -41,12 +43,6 @@ jobs:
 - `AWS_SECRET_ACCESS_KEY` – **Required** The AWS secret access key part of your credentials ([more info](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys))
 
 For details on creating secrets and using them with GitHub Actions, see [Creating encrypted secrets for a repository](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets-for-a-repository).
-
-### Environment
-
-Each Stack instance in your AWS CDK app is explicitly or implicitly associated with an environment (`env`). An environment is the target AWS account and AWS Region into which this stack needs to be deployed.
-
-See [the CDK developer guide](https://docs.aws.amazon.com/cdk/latest/guide/environments.html) for more information.
 
 ## License
 
