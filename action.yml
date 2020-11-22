@@ -12,7 +12,7 @@ branding:
 inputs:
   cdk_command:
     description: 'CDK Command'
-    default: '--version'
+    default: 'cdk --version'
   working_dir:
     description: 'AWS CDK working directory.'
     default: '.'
