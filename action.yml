@@ -10,6 +10,9 @@ branding:
   icon: 'upload-cloud'
   color: 'yellow'
 inputs:
+  cdk_command:
+    description: 'CDK Command'
+    default: '--version'
   working_dir:
     description: 'AWS CDK working directory.'
     default: '.'
