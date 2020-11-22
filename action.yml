@@ -13,6 +13,9 @@ inputs:
   python_build_command:
     description: 'command to build your layer'
     default: 'python -V'
+  zip_command:
+    description: 'command to zip your layer'
+    default: 'zip --help'
   cdk_command:
     description: 'CDK Command'
     default: 'cdk --version'
