@@ -25,7 +25,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: CDK Synth
-      uses: g-farrow/github-action-aws-cdk-amazon-linux@master
+      uses: muldos/github-action-aws-cdk-amazon-linux@master
       with:
         args: synth
       env:
