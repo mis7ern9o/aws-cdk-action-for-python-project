@@ -11,8 +11,7 @@ LABEL "com.github.actions.color"="yellow"
 
 RUN yum -y update
 RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
-RUN yum -y install nodejs python3-pip zip systemd
-RUN amazon-linux-extras install docker
+RUN yum -y install nodejs python3-pip zip
 RUN python3 --version
 RUN npm install -g aws-cdk
 
