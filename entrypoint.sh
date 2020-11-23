@@ -1,5 +1,4 @@
 #!/bin/sh
-service docker start
 set -e
 echo "Building your layer"
 sh -c "${INPUT_PYTHON_BUILD_COMMAND}"
